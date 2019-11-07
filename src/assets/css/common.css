@@ -1,0 +1,212 @@
+/* #RestCss
+========================================== */
+@charset "utf-8";
+*{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+*:before,
+*:after{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+/** 清除内外边距 **/
+
+/* structural elements 结构元素 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+/* list elements 列表元素 */
+dl, dt, dd, ul, ol, li,
+/* text formatting elements 文本格式元素 */
+pre,
+/* form elements 表单元素 */
+form, fieldset, legend, button, input, textarea,
+/* table elements 表格元素 */
+th, td { margin: 0; padding: 0;}
+
+/** 设置默认字体 **/
+body, pre, button, input, select, textarea /* for ie */
+{ font: 14px/1.6 tahoma, arial, 'Microsoft YaHei', sans-serif;}
+
+/** 重置文档高度 **/
+html, body{ height: 100%;}
+body{ color: #c1c1c1;}
+
+h1, h2, h3, h4, h5, h6{ font-size: 100%; font-weight: normal;}
+/* 将斜体扶正 */
+address, cite, dfn, em, var{ font-style: normal;}
+/* 统一等宽字体 */
+code, kbd, pre, samp{ font-family: courier new, courier, monospace;}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+small{ font-size: 12px;}
+
+
+/** 重置列表元素 **/
+ul, ol{ list-style: none;}
+/** 重置文本格式元素 **/
+a{ text-align: center; text-decoration: none; color: inherit;}
+a:focus{ outline: none;}
+
+
+/** 重置表单元素 **/
+legend{ color: #000;} /* for ie6 */
+fieldset, img{ border: 0; vertical-align: middle}
+/* 使得表单元素在 ie 下能继承字体大小 */
+button, input, select, textarea{ font-size: 100%;}
+/*表单元素字体*/
+input, textarea, button{ font: 14px/1.6 Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, Arial, sans-serif; outline: 0;}
+
+input[type='button'], input[type='submit'], button{ cursor: pointer;}
+button:focus{ outline: none;}
+
+input[type='button'], input[type='submit'], input[type='reset'], button{ /*input[type="file"]::-webkit-file-upload-button,*/
+    /*border: 1px solid transparent;*/
+}
+
+/*设置表单元素不可用的样式*/
+/* input[readonly],
+input:disabled,
+button:disabled,
+button[readonly],
+textarea:disabled{ color: #545454!important; background-color: #f0ece8!important;}
+input[readonly]:hover,
+input:disabled:hover,
+button:disabled:hover,
+button[readonly]:hover,
+textarea:disabled:hover{ cursor: not-allowed;} */
+
+/** placeholder 重置 **/
+[placeholder]{ font-family: 'Microsoft yahei';}
+::-moz-placeholder{ text-indent: 5px; /* 没有用 */ opacity: 1!important; color: #bbb;}
+:-ms-input-placeholder{ text-indent: 5px; color: #bbb;}
+::-webkit-input-placeholder{ text-indent: 5px; color: #bbb;}
+
+/** 重置表格元素 **/
+table{ border-spacing: 0; border-collapse: collapse;}
+img{
+    width: 100%;
+}
+
+/* #滚动条
+=========*/
+::-webkit-scrollbar{ width: 8px; height: 8px;}
+
+::-webkit-scrollbar-track-piece{ margin: -2px; background-color: #eee;}
+
+::-webkit-scrollbar-thumb{ min-width: 150px; min-height: 100px; border-radius: 10px; background: #aaa;}
+
+::-webkit-scrollbar-thumb:vertical:hover{ background: #555;}
+
+::-webkit-scrollbar-thumb:horizontal:hover{ background: #555;}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.text-center{
+    text-align: center;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.c-blue, .c-gray-d, .c-gray, .c-strong, .c-red, .c-yellow, .c-white{
+    padding: 0 2px;
+}
+.c-yellow {
+    color: #fb9b08;
+}
+.cfx::after{
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    content: '.';
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.flex{
+    display: flex;
+}
+.el-button.el-button--login{
+    border: none;
+    color: #ffffff;
+    padding: 9px 20px;
+    background: url(../img/topbtn.png) no-repeat left top; 
+    background-size: 100%;
+}
+.el-button.el-button--register{
+    padding: 9px 20px;
+    color: #ff9900;
+    background: none;
+    border-color: #ff9900;
+}
+
+.login .el-dialog__header{
+    height: 60px;
+    background-color: #e99c3d;
+    position: relative;
+}
+.login.discount-dialog .el-dialog__header{
+    height: 170px;
+}
+.login .el-button--sublogin{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #b03a34;
+    border-color: none;
+    color: #ffffff;
+}
+.login .el-dialog__body{
+    padding-bottom: 0;
+}
+.login .el-dialog__footer{
+    padding-top: 0;
+}
+.login .el-dialog__headerbtn .el-dialog__close{
+    color: #ffffff;
+}
+.login .el-input__inner{
+    padding-left: 30px;
+}
+.login.center .el-input__inner{
+    padding-left: 15px;
+}
+.open-more{
+    display: inline-block;
+    height: 50px;
+    width: 145px;
+    text-align: center;
+    line-height: 47px;
+    color: #ff9900;
+    font-size: 18px;
+    border: 2px solid #ff9900;
+    border-radius: 50px;
+    padding-left: 3px;
+}
+
+.my-tabs {
+    display: flex;
+    background-color: #f0ece8;
+}
+.my-tabs .tab-item {
+    width: 194px;
+    height: 50px;
+    cursor: pointer;
+    color: #444444;
+    background-color: #dbd5cc;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 1px;
+  }
+.my-tabs .tab-item.active {
+    background-color: #e99c3d;
+    color: #ffffff;
+}
+
+.el-button.el-button--submit{
+    background-color: #e08a07;
+    color: #fff;
+    box-shadow: 0 2px 15px #f4cfa1;
+}
